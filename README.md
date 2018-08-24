@@ -20,7 +20,7 @@ use Gangangan\Baic\Baic;
 $sdkId = 'Your sdkId';
 $appKey = 'Your appKey';
 
-$baic = new Baic($sdkId, $key);
+$baic = new Baic($sdkId, $appKey);
 ```
 
 ###  获取Token
