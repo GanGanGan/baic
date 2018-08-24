@@ -1,0 +1,20 @@
+{
+    "name": "gangangan/baic",
+    "description": "BAIC简化版 PHP SDK。",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "gangangan",
+            "email": "gl@baic.io"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Gangangan\\Baic\\": "./src"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "simplesoftwareio/simple-qrcode": "~2"
+    }
+}
