@@ -22,10 +22,12 @@ class Baic
     protected $apiPrefix = 'http://140.143.225.189/paygateway';
     protected $apiGetToken = '/sdk/getToken';                                           //获取Token
     protected $apiGetPorder = '/sdk/getPorder';                                         //获取Porder
-    protected $apiSelectOrderByTime = '/sdk/selectOrderByTime';                         //时间区间订单查询
+    protected $apiSelectByTransactionNo = '/sdk/selectByTransactionNo';                 //根据交易号订单查询
+    protected $apiSelectOrderByTime = '/sdk/selectOrderByTime';                         //根据时间区间订单查询
     protected $apiSelectOrderByPage = '/sdk/selectOrderByPage';                         //订单分页查询
     protected $apiSelectRefundByTransactionNo = '/sdk/selectRefundByTransactionNo';     //根据交易号退款查询
     protected $apiSelectByRefundRecordByPage = '/sdk/selectByRefundRecordByPage';       //退款订单分页查询
+    protected $apiSdkRefundRequest = '/sdk/sdkRefundRequest';                           //退款
 
     /**
      * @var string
@@ -108,6 +110,18 @@ class Baic
     }
 
     /**
+     * 订单号订单查询
+     * @param array $data
+     * @return \Psr\Http\Message\ResponseInterface
+     * @throws \Gangangan\Baic\Exceptions\HttpException
+     */
+    public function selectByTransactionNo($data)
+    {
+        $url = $this->apiPrefix . $this->apiSelectByTransactionNo;
+        return $this->doPostFormUrlEncoded($url, $data);
+    }
+
+    /**
      * 时间区间订单查询
      * @param array $data
      * @return \Psr\Http\Message\ResponseInterface
@@ -152,6 +166,18 @@ class Baic
     public function selectByRefundRecordByPage($data)
     {
         $url = $this->apiPrefix . $this->apiSelectByRefundRecordByPage;
+        return $this->doPostFormUrlEncoded($url, $data);
+    }
+
+    /**
+     * 退款操作
+     * @param array $data
+     * @return \Psr\Http\Message\ResponseInterface
+     * @throws \Gangangan\Baic\Exceptions\HttpException
+     */
+    public function sdkRefundRequest($data)
+    {
+        $url = $this->apiPrefix . $this->apiSdkRefundRequest;
         return $this->doPostFormUrlEncoded($url, $data);
     }
 
