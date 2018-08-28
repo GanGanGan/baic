@@ -23,7 +23,7 @@ $appKey = 'Your appKey';
 $baic = new Baic($sdkId, $appKey);
 ```
 
->###  1.获取Token
+>###    1.获取Token
 >
 >```php
 >$response = $baic->getToken();
@@ -43,7 +43,7 @@ $baic = new Baic($sdkId, $appKey);
 >|message|String|相应信息|
 >|token|String|Token|
 
->### 2.获取Porder
+>###    2.获取Porder
 >
 >```php
 >$data = [
@@ -67,7 +67,7 @@ $baic = new Baic($sdkId, $appKey);
 
 拿到porder后生成二维码，然后钱包APP扫码进行后续操作
 
->### 3.查询订单根据时间
+>###    3.查询订单根据时间
 >```php
 >$data = [
 >    'token' => '1252002bd3ff4a418b24b331cd28b0c4',      //token
@@ -126,7 +126,7 @@ $baic = new Baic($sdkId, $appKey);
 >|operator|String|操作人|
 >|transactionType|Byte|交易类型:0:购买,1:退货|
 
->### 4.查询订单根据页数
+>###    4.查询订单根据页数
 >```php
 >$data = [
 >    'token' => '1252002bd3ff4a418b24b331cd28b0c4',      //token
@@ -156,7 +156,7 @@ $baic = new Baic($sdkId, $appKey);
 >}
 >```
 
->###5.查询订单根据交易号
+>###    5.查询订单根据交易号
 >```php
 >$data = [
 >    'token' => '1252002bd3ff4a418b24b331cd28b0c4',      //token
@@ -202,7 +202,7 @@ $baic = new Baic($sdkId, $appKey);
 >|refundAmount|BigDecimal|退款金额|
 
 
->###6.查询退款根据交易号
+>###    6.查询退款根据交易号
 >```php
 >$data = [
 >    'token' => '1252002bd3ff4a418b24b331cd28b0c4',      //token
@@ -233,7 +233,7 @@ $baic = new Baic($sdkId, $appKey);
 >}
 >```
 
->###7.查询退款根据页数
+>###    7.查询退款根据页数
 >```php
 >$data = [
 >    'token' => '1252002bd3ff4a418b24b331cd28b0c4',      //token
@@ -263,7 +263,7 @@ $baic = new Baic($sdkId, $appKey);
 >}
 >```
 
->###8.退款操作
+>###    8.退款操作
 >```php
 >$data = [
 >    'token' => '1252002bd3ff4a418b24b331cd28b0c4',      //token
