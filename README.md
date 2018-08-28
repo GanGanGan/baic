@@ -241,6 +241,7 @@ $baic = new Baic($sdkId, $appKey);
 >    'limit' => 1,                                       //一页几个
 >    'page' => 1,                                        //第几页
 >];
+>$response = $baic->sdkRefundRequest($data);
 >```
 >响应示例：
 >```json
