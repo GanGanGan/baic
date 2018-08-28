@@ -9,7 +9,7 @@ $data = [
 ];
 
 try {
-    $response = $baic->selectOrderByPage($data);
+    $response = $baic->selectRefundRecordByPage($data);
 } catch (\Gangangan\Baic\Exceptions\Exception $e) {
     $message = $e->getMessage();
     if ($e instanceof \Gangangan\Baic\Exceptions\HttpException) {

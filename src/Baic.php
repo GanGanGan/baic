@@ -26,7 +26,7 @@ class Baic
     protected $apiSelectOrderByTime = '/sdk/selectOrderByTime';                         //根据时间区间订单查询
     protected $apiSelectOrderByPage = '/sdk/selectOrderByPage';                         //订单分页查询
     protected $apiSelectRefundByTransactionNo = '/sdk/selectRefundByTransactionNo';     //根据交易号退款查询
-    protected $apiSelectByRefundRecordByPage = '/sdk/selectByRefundRecordByPage';       //退款订单分页查询
+    protected $apiSelectRefundRecordByPage = '/sdk/selectRefundRecordByPage';           //退款订单分页查询
     protected $apiSdkRefundRequest = '/sdk/sdkRefundRequest';                           //退款
 
     /**
@@ -163,9 +163,9 @@ class Baic
      * @return \Psr\Http\Message\ResponseInterface
      * @throws \Gangangan\Baic\Exceptions\HttpException
      */
-    public function selectByRefundRecordByPage($data)
+    public function selectRefundRecordByPage($data)
     {
-        $url = $this->apiPrefix . $this->apiSelectByRefundRecordByPage;
+        $url = $this->apiPrefix . $this->selectRefundRecordByPage;
         return $this->doPostFormUrlEncoded($url, $data);
     }
 
