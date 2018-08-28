@@ -6,6 +6,7 @@ $data = [
     'sdkId' => $sdkId,                                  //自己的sdkId
     'merchantId' => 'asdasdasdasdasd',                  //商户ID
     'transactionNo' => '1808223225350327327962',        //交易号
+    'refundAmount' => 0.001,                            //退款金额
 ];
 
 try {

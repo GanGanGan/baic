@@ -270,19 +270,25 @@ $baic = new Baic($sdkId, $appKey);
 >    'sdkId' => $sdkId,                                  //自己的sdkId
 >    'merchantId' => 'asdasdasdasdasd',                  //商户ID
 >    'transactionNo' => '1808223225350327327962',        //交易号
+>    'refundAmount' => 0.001,                            //退款金额
 >];
 >```
 >响应示例：
 >```json
 >{
->    "isSuccess": 1,
->    "refundAmount": 1,
->    "currencyType": "BAIC",
->    "orderNO": "1212121212",
+>    "data": {
+>        "currencyType": "USDT",
+>        "orderNo": "20180828091308354",
+>        "refundNo": "1808285041352509149216",
+>        "transactionNo": "1808284759253919660144",
+>        "isSuccess": 1,
+>        "refundAmount": 0.001
+>    },
 >    "success": "true",
->    "message": "查詢成功!"
+>    "message": "请求成功!"
 >}
 >```
+
 
 ## 参考
 - [BAIC网关接口]
