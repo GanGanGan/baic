@@ -273,6 +273,7 @@ $baic = new Baic($sdkId, $appKey);
 >    'transactionNo' => '1808223225350327327962',        //交易号
 >    'refundAmount' => 0.001,                            //退款金额
 >];
+>$response = $baic->sdkRefundRequest($data);
 >```
 >响应示例：
 >```json
